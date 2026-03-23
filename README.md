@@ -23,3 +23,5 @@ This project is a simple full stack application built using:
 - CSS
 - Java
 - Spring Boot
+
+Tech Stack: HTML, CSS, Java, Spring Boot, MySQL, JPA
