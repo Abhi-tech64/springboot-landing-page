@@ -1,45 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Landing Page</title>
+    <title>Contact Form</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-    <h1>Welcome to My Website</h1>
-    <p>Full Stack Java Development Project</p>
-</header>
+<h2>Contact Form</h2>
 
-<section class="about">
-    <h2>About</h2>
-    <p>This is my first Full Stack project using HTML, CSS and Spring Boot.</p>
-</section>
+<form action="http://localhost:8080/contact" method="POST">
 
-<section class="contact">
-    <h2>Contact Us</h2>
+    <input type="text" name="name" placeholder="Enter Name" required>
+    <input type="email" name="email" placeholder="Enter Email" required>
+    <textarea name="message" placeholder="Enter Message" required></textarea>
 
-    <form action="http://localhost:8080/contact" method="POST">
+    <button type="submit">Submit</button>
 
-        <label>Name</label>
-        <input type="text" name="name" required>
-
-        <label>Email</label>
-        <input type="email" name="email" required>
-
-        <label>Message</label>
-        <textarea name="message" required></textarea>
-
-        <button type="submit">Send Message</button>
-
-    </form>
-
-</section>
-
-<footer>
-    <p>© 2026 My Landing Page</p>
-</footer>
+</form>
 
 </body>
 </html>
