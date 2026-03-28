@@ -10,6 +10,8 @@ import java.util.List;
 
 @RestController
 @CrossOrigin
+@RestController
+@CrossOrigin
 public class ContactController {
 
     @Autowired
