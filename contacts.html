@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Dashboard</title>
+</head>
+
+<body>
+
+<h2>Contact Management Dashboard</h2>
+
+<table border="1" id="contactTable">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Message</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+
+<script>
+
+fetch("http://localhost:8080/contacts")
+.then(response => response.json())
+.then(data => {
+    let table = document.querySelector("#contactTable tbody");
+
+    data.forEach(contact => {
+        let row = `
+            <tr>
+                <td>${contact.id}</td>
+                <td>${contact.name}</td>
+                <td>${contact.email}</td>
+                <td>${contact.message}</td>
+            </tr>
+        `;
+        table.innerHTML += row;
+    });
+});
+
+</script>
+
+</body>
+</html>
